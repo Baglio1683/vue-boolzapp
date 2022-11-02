@@ -42,6 +42,10 @@ i:hover{
     height: 64vh;
 }
 
+.contacts .user_box:hover{
+    background-color: #E9EBEB;
+}
+
 .user_box{
     height: 8vh;
     width: 100%;
