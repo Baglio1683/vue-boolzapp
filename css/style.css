@@ -33,6 +33,11 @@ img{
     height: 100%;
 }
 
+.contacts{
+    overflow-y: scroll;
+    height: 64vh;
+}
+
 .user_box{
     height: 8vh;
     width: 100%;
@@ -62,7 +67,7 @@ img{
 }
 
 .box_search{
-    height: 4vh;
+    height: 8vh;
     width: 100%;
     background-color: white;
     display: flex;
@@ -79,6 +84,7 @@ img{
     height: 74vh;
     width: 100%;
     background-image: url('../img/mine.jpg');
+    overflow-y: scroll;
 }
 
 .box_sendmessage{
@@ -93,7 +99,7 @@ img{
 }
 
 .input_message{
-     width: 70%;
+     width: 80%;
      height: 70%;
      display: flex;
 }
@@ -136,4 +142,12 @@ img{
 
 .f_small{
     font-size: small;
+}
+
+.f_col_B1B1B1{
+    color: #B1B1B1;
+}
+
+.f_col_BBB9C0{
+    color: #BBB9C0;
 }
