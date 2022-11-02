@@ -76,6 +76,18 @@ img{
     padding-left: 15px;
 }
 
+.bell{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    text-align: end;
+    border-radius: 30px;
+    background-color: white;
+    color:#8EDAFC;
+    margin-right: 10px;
+}
+
 .box_search i{
     margin-right: 5px;
 }
@@ -150,4 +162,8 @@ img{
 
 .f_col_BBB9C0{
     color: #BBB9C0;
+}
+
+.f_no_dec{
+    text-decoration: none;
 }
