@@ -12,7 +12,7 @@
 
 <!-- Start Body -->
 <body>
-    
+
     <!-- Start Container  -->
    <div class="container" id="app">
 
@@ -20,7 +20,7 @@
         <div class="box_left">
 
             <!-- Start User box  -->
-            <div class="user_box back_EAEAEA"> 
+            <div class="user_box back_EAEAEA">
 
                 <!-- Start card  -->
                 <div class="card">
@@ -42,7 +42,7 @@
             </div>
                 <!-- End user box  -->
 
-            
+
             <div class="box_notify">
                 <a  href="" class="bell">
                     <i class="fa-solid fa-bell-slash"></i>
@@ -54,24 +54,24 @@
             </div>
 
             <div class="box_search">
- 
+
                <a href="" class="f_col_B1B1B1 f_no_dec"><i class="fa-solid fa-magnifying-glass"></i> Cerca o inizia una nuova chat</a>
-            
-             </div>        
-            
-            
+
+             </div>
+
+
             <!-- Start the contacts -->
             <div class="contacts">
 
                 <!-- Start user box -->
-                <div class="user_box">
+                <div class="user_box" v-for="(item,index) in contacts">
                     <!-- Start card  -->
                     <div class="card">
                         <div class="box_img">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="item.avatar" alt="">
                         </div>
                         <div>
-                            Michele
+                            {{item.name}}
                         <p class="f_small f_col_BBB9C0">Ultimo messaggio inviato</p>
                         </div>
                     </div>
@@ -80,85 +80,11 @@
                         <p class="f_small f_col_BBB9C0">12:00</p>
                     </div>
                 </div>
-                <!-- end user box -->
+                <!-- end user box-->
 
-                <!-- Start user box -->
-                <div class="user_box">
-                    <!-- Start card  -->
-                    <div class="card">
-                    <div class="box_img">
-                        <img src="img/avatar_2.jpg" alt="">
-                    </div>
-                    <div>
-                        Carlo
-                        <p class="f_small f_col_BBB9C0">Ultimo messaggio inviato</p>
-                    </div>
-                </div>
-                <!-- end card  -->
-                <div class="m_right5">
-                    <p class="f_small f_col_BBB9C0">12:00</p>
-                </div>
-            </div>
-            <!-- end user box -->
-
-                <!-- Start user box -->
-                <div class="user_box">
-                    <!-- Start card  -->
-                    <div class="card">
-                    <div class="box_img">
-                        <img src="img/avatar_3.jpg" alt="">
-                    </div>
-                    <div>
-                        Alberto
-                        <p class="f_small f_col_BBB9C0">Ultimo messaggio inviato</p>
-                    </div>
-                </div>
-                <!-- end card  -->
-                <div class="m_right5">
-                    <p class="f_small f_col_BBB9C0">12:00</p>
-                </div>
-            </div>
-            <!-- end user box -->
-
-                <!-- Start user box -->
-                <div class="user_box">
-                    <!-- Start card  -->
-                    <div class="card">
-                    <div class="box_img">
-                        <img src="img/avatar_4.jpg" alt="">
-                    </div>
-                    <div>
-                        Ciccio
-                        <p class="f_small f_col_BBB9C0">Ultimo messaggio inviato</p>
-                    </div>
-                </div>
-                <!-- end card  -->
-                <div class="m_right5">
-                    <p class="f_small f_col_BBB9C0">12:00</p>
-                </div>
-            </div>
-            <!-- end user box -->
-
-                <!-- Start user box -->
-                <div class="user_box">
-                    <!-- Start card  -->
-                    <div class="card">
-                    <div class="box_img">
-                        <img src="img/avatar_5.jpg" alt="">
-                    </div>
-                    <div>
-                        Pasticcio
-                        <p class="f_small f_col_BBB9C0">Ultimo messaggio inviato</p>
-                    </div>
-                </div>
-                <!-- end card  -->
-                <div class="m_right5">
-                    <p class="f_small f_col_BBB9C0">12:00</p>
-                </div>
-            </div>
-            <!-- end user box -->
+                
         </div>
-        <!-- end contacts  -->
+        <!-- end contact -->
 
         </div>
         <!-- End box left  -->
@@ -167,18 +93,18 @@
         <!-- Start Box Right  -->
         <div class="box_right">
 
-            <div class="user_box back_EAEAEA">  
-                
+            <div class="user_box back_EAEAEA">
+
                 <!-- Start card  -->
                 <div class="card">
                     <div class="box_img">
-                        <img src="img/avatar_io.jpg" alt="">
+                        <img src="img/avatar_1.jpg" alt="">
                     </div>
                     <div>
-                        Sofia
+                        Michele
                         <p class="f_small f_col_B1B1B1">Ultimo accesso oggi alle 12</p>
                     </div>
-                    
+
                 </div>
                 <!-- end card  -->
 
@@ -211,9 +137,9 @@
             <!-- end box for message  -->
 
             <!-- Start User box final right main box  -->
-            <div class="box_sendmessage">     
+            <div class="box_sendmessage">
                 <div>
-                    <a href="" class="f_col_B1B1B1"><i class="fa-regular fa-face-smile f_col_B1B1B1"></i></a> 
+                    <a href="" class="f_col_B1B1B1"><i class="fa-regular fa-face-smile f_col_B1B1B1"></i></a>
                 </div>
 
                 <div class="input_message">
@@ -225,7 +151,7 @@
                 </div>
             </div>
 
-        
+
         </div>
 
 
@@ -237,6 +163,6 @@
 
 
 
-<script src="js/script.js"></script>    
+<script src="js/script.js"></script>
 </body>
 </html>
