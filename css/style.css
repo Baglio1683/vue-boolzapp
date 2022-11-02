@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80vw;
+    height: 90vh;
+    margin: 0 auto;
+    margin-top: 5vh;
+    display: flex;
+}
+
+.box_left{
+    width: 35%;
+    height: 100%;
+
+    /* debug */
+    background-color: lightblue;
+}
+
+.box_right{
+    width: 65%;
+    height: 100%;
+
+    /* debug */
+    background-color: lightpink;
+}
+
+.user_box{
+    height: 8vh;
+    width: 100%;
+       /* debug */
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.box_notify{
+    height: 10vh;
+    width: 100%;
+       /* debug */
+    background-color: azure;
+    border: 1px solid black;
+}
+
+.box_search{
+    height: 4vh;
+    width: 100%;
+       /* debug */
+    background-color: lightsalmon;
+    border: 1px solid black;
+}
+
+.box_message{
+    height: 74vh;
+    width: 100%;
+       /* debug */
+    background-color: lightgreen;
+    border: 1px solid black;
+}
