@@ -97,6 +97,36 @@ img{
     width: 100%;
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
+    padding-top: 15px;
+}
+
+.row_message{
+    display: flex;
+    width: 100%;
+    min-height: 5vh;
+}
+
+.sent_message{
+    background-color: #D5F9BA;
+    min-height: 5vh;
+    min-width: 30%;
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    border-radius: 6px;
+
+}
+
+.reiceved_message{
+    background-color: white;
+    min-height: 5vh;
+    min-width: 30%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 6px;
 }
 
 .box_sendmessage{
@@ -137,6 +167,8 @@ img{
 }
 
 
+
+
 /* Utilities  */
 
 
@@ -166,4 +198,8 @@ img{
 
 .f_no_dec{
     text-decoration: none;
+}
+
+.flex_end{
+    justify-content: flex-end;
 }
