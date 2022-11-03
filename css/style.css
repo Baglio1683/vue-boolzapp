@@ -150,6 +150,7 @@ i:hover{
     padding-bottom: 15px;
     max-width: 47%;
     position: relative;
+    margin-bottom: 10px;
 
 }
 
@@ -167,7 +168,7 @@ i:hover{
     padding-bottom: 15px;
     max-width: 47%;
     position: relative;
-
+    margin-bottom: 10px;
 }
 
 .box_sendmessage{

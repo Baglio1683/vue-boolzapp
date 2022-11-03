@@ -141,7 +141,7 @@
                 </div>
 
                 <div class="input_message">
-                    <input type="text" name="" id="" placeholder="Scrivi un messaggio">
+                    <input type="text" v-model="in_message" name="" @keyup.enter="addMessage" id="" placeholder="Scrivi un messaggio">
                 </div>
 
                 <div>

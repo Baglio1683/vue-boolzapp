@@ -6,6 +6,14 @@ const { createApp } = Vue;
 
         currentContact: 0,
 
+        newObj : {
+            date: '10/01/2020 15:30:55',
+            message: "",
+            status: 'sent'
+        },
+
+        in_message: "",
+
         contacts: [
             {
                 name: 'Michele',
@@ -179,10 +187,16 @@ const { createApp } = Vue;
         changeContact(ind){
 
             this.currentContact = ind; 
-
-
         }
-    }
+    }, 
+
+    addMessage(){
+
+      this.newObj.message = this.in_message
+      this.contacts[this.currentContact].messages.push({...this.newObj}) 
+      this.in_message = ""
+
+    },
 
   }).mount('#app')
 
