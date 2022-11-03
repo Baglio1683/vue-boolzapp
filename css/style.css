@@ -129,6 +129,13 @@ i:hover{
     padding-right: 30px;
 }
 
+.message_time{
+    padding: 2px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+
 .sent_message{
     background-color: #D5F9BA;
     min-height: 5vh;
@@ -142,6 +149,7 @@ i:hover{
     padding-top: 15px;
     padding-bottom: 15px;
     max-width: 47%;
+    position: relative;
 
 }
 
@@ -158,6 +166,7 @@ i:hover{
     padding-top: 15px;
     padding-bottom: 15px;
     max-width: 47%;
+    position: relative;
 
 }
 
