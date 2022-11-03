@@ -239,3 +239,7 @@ textarea:focus, input:focus{
 .flex_end{
     justify-content: flex-end;
 }
+
+.bord_right_lightGray{
+    border-right: 1px solid lightgray;
+}
