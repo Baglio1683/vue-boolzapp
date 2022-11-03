@@ -6,6 +6,8 @@ const { createApp } = Vue;
 
         currentContact: 0,
 
+        searchName : "",
+
         newObj : {
             date: '10/01/2020 15:30:55',
             message: "",
@@ -187,16 +189,42 @@ const { createApp } = Vue;
         changeContact(ind){
 
             this.currentContact = ind; 
+        },
+
+        addMessage(){
+
+            this.newObj.message = this.in_message
+            this.contacts[this.currentContact].messages.push({...this.newObj}) 
+            this.in_message = ""
+            const addResp =  setTimeout(this.AddRecMess ,1000)
+      
+          },
+
+          AddRecMess(){
+
+            this.newObj.status ='received'
+            this.newObj.message = 'ok'
+            this.contacts[this.currentContact].messages.push({...this.newObj}) 
+            this.newObj.status='sent'
+            this.newObj.message = ''
+          },
+
+          check(itm){
+
+            if(this.searchName ==="" || itm.name.includes(this.searchName)){
+             
+            return true
+            }
+            else{
+                return false
+            }
+
+          },
+
         }
-    }, 
 
-    addMessage(){
 
-      this.newObj.message = this.in_message
-      this.contacts[this.currentContact].messages.push({...this.newObj}) 
-      this.in_message = ""
 
-    },
 
   }).mount('#app')
 

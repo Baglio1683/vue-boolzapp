@@ -55,10 +55,7 @@
             </div>
 
             <div class="box_search">
-
-
-                <input type="text" class="f_col_B1B1B1" placeholder=" &#x1F50D; Cerca o inizia una nuova chat">
-                <!-- <a href="" class="f_col_B1B1B1 f_no_dec"><i class="fa-solid fa-magnifying-glass"></i> Cerca o inizia una nuova chat</a> -->
+                <input type="text" v-model="searchName" class="f_col_B1B1B1" placeholder=" &#x1F50D; Cerca o inizia una nuova chat">
              </div>
 
 
@@ -68,7 +65,7 @@
                 <!-- Start user box -->
                 <div class="user_box" v-for="(item,index) in contacts" @click="changeContact(index)">
                     <!-- Start card  -->
-                    <div class="card">
+                    <div class="card" v-if="check(item)">
                         <div class="box_img">
                             <img :src="item.avatar" alt="">
                         </div>
@@ -78,12 +75,11 @@
                         </div>
                     </div>
                     <!-- end card  -->
-                    <div class="m_right5">
+                    <div class="m_right5" v-if="check(item)">
                         <p class="f_small f_col_BBB9C0">12:00</p>
                     </div>
                 </div>
                 <!-- end user box-->
-
         </div>
         <!-- end contact -->
 
