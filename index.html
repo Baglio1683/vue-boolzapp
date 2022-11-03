@@ -66,7 +66,7 @@
             <div class="contacts">
 
                 <!-- Start user box -->
-                <div class="user_box" v-for="(item,index) in contacts">
+                <div class="user_box" v-for="(item,index) in contacts" @click="changeContact(index)">
                     <!-- Start card  -->
                     <div class="card">
                         <div class="box_img">
@@ -99,10 +99,10 @@
                 <!-- Start card  -->
                 <div class="card">
                     <div class="box_img">
-                        <img src="img/avatar_1.jpg" alt="">
+                        <img :src="contacts[currentContact].avatar" alt="">
                     </div>
                     <div>
-                        Michele
+                        {{contacts[currentContact].name}}
                         <p class="f_small f_col_B1B1B1">Ultimo accesso oggi alle 12</p>
                     </div>
 
@@ -122,15 +122,16 @@
             <!-- Start Box for message  -->
             <div class="box_message">
 
-                <div class="row_message flex_end">
-                   <div class="sent_message">
-                     Ciao Come stai??
+                <div v-for="(itm) in contacts[currentContact].messages" class="row_message" :class="itm.status === 'sent' ? 'flex_end' ">
+                   <div :class="itm.status === 'sent' ? 'sent_message' : 'reiceved_message' ">
+                     {{itm.message}}
                      <div class="message_time f_small">
                         12:00
                       </div>
                    </div>
                 </div>
 
+                <!--   
                 <div class="row_message">
                     <div class="reiceved_message">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti omnis unde consectetur doloremque tenetur eveniet aut eligendi maxime. Doloribus alias tempora at eaque quasi tenetur exercitationem et ea commodi quo?
@@ -138,7 +139,7 @@
                             12:00
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
             <!-- end box for message  -->

@@ -1,0 +1,11 @@
+<div class="box_message" v-for="(itm,ind) in contacts">
+
+                <div class="row_message" :class="itm.status === 'sent' ? 'flex_end' ">
+                   <div :class="itm.status === 'sent' ? 'sent_message' : 'reiceved_message' ">
+                     {{itm.message}}
+                     <div class="message_time f_small">
+                        12:00
+                      </div>
+                   </div>
+                   
+   </div>

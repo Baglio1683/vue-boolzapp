@@ -4,6 +4,8 @@ const { createApp } = Vue;
     data() {
       return {
 
+        currentContact: 0,
+
         contacts: [
             {
                 name: 'Michele',
@@ -170,6 +172,17 @@ const { createApp } = Vue;
         ]
         
       }
+    },
+
+    methods : {
+
+        changeContact(ind){
+
+            this.currentContact = ind; 
+
+
+        }
     }
+
   }).mount('#app')
 
