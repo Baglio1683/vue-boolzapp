@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/2013c63b7f.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.min.js" integrity="sha512-79nhbkASdW5wurW8DtF9Vd7BEDKdTbCKkh87lW6W3tk9T4L9Bc58MzmvRzjMcFCSKpjkoRjwzrTdfOa5lkfJ5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Boolzapp</title>
 </head>
 
@@ -122,7 +123,7 @@
                    <div :class="itm.status === 'sent' ? 'sent_message' : 'reiceved_message' ">
                      {{itm.message}}
                      <div class="message_time f_small">
-                        12:00
+                        {{itm.date.substring(11, 16)}}
                       </div>
                    </div>
                 </div>
