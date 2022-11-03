@@ -122,7 +122,7 @@
             <!-- Start Box for message  -->
             <div class="box_message">
 
-                <div v-for="(itm) in contacts[currentContact].messages" class="row_message" :class="itm.status === 'sent' ? 'flex_end' ">
+                <div v-for="(itm) in contacts[currentContact].messages" class="row_message" :class="itm.status === 'sent' ? 'flex_end': ''">
                    <div :class="itm.status === 'sent' ? 'sent_message' : 'reiceved_message' ">
                      {{itm.message}}
                      <div class="message_time f_small">
@@ -130,16 +130,6 @@
                       </div>
                    </div>
                 </div>
-
-                <!--   
-                <div class="row_message">
-                    <div class="reiceved_message">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti omnis unde consectetur doloremque tenetur eveniet aut eligendi maxime. Doloribus alias tempora at eaque quasi tenetur exercitationem et ea commodi quo?
-                        <div class="message_time f_small">
-                            12:00
-                        </div>
-                    </div>
-                </div> -->
 
             </div>
             <!-- end box for message  -->
