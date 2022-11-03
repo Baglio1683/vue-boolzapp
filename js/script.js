@@ -211,20 +211,20 @@ const { createApp } = Vue;
 
           check(itm){
 
-            if(this.searchName ==="" || itm.name.includes(this.searchName)){
+            let x = itm.name.toLowerCase(); 
+
+
+            if(this.searchName ==="" || x.includes(this.searchName.toLowerCase())){
              
-            return true
-            }
-            else{
-                return false
-            }
+                return true
+                }
+                else{
+                    return false
+                }
 
           },
 
         }
-
-
-
 
   }).mount('#app')
 
