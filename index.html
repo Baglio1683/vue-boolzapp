@@ -65,7 +65,7 @@
             <div class="contacts">
 
                 <!-- Start user box -->
-                <div class="user_box" v-for="(item,index) in contacts" @click="changeContact(index)">
+                <div class="user_box" v-for="(item,index) in contacts" @click="changeContact(index)" :class="item.visible ? '' : 'd_none' ">
                     <!-- Start card  -->
                     <div class="card" v-if="check(item)">
                         <div class="box_img">

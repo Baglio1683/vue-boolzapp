@@ -274,3 +274,7 @@ textarea:focus, input:focus{
 .bord_right_lightGray{
     border-right: 1px solid lightgray;
 }
+
+.d_none{
+    display: none;
+}

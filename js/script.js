@@ -249,9 +249,11 @@ const dt = luxon.DateTime;
 
             if(this.searchName ==="" || x.includes(this.searchName.toLowerCase())){
              
+                itm.visible = true
                 return true
                 }
                 else{
+                    itm.visible= false
                     return false
                 }
 
