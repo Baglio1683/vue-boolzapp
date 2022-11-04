@@ -120,11 +120,15 @@
             <!-- Start Box for message  -->
             <div class="box_message">
 
-                <div v-for="(itm) in contacts[currentContact].messages" class="row_message" :class="itm.status === 'sent' ? 'flex_end': ''">
-                   <div :class="itm.status === 'sent' ? 'sent_message' : 'reiceved_message' ">
+                <div v-for="(itm,index) in contacts[currentContact].messages" class="row_message" :class="itm.status === 'sent' ? 'flex_end': ''">
+                   <div :class="itm.status === 'sent' ? 'sent_message' : 'reiceved_message' " @click="showOption(index)">
                      {{itm.message}}
                      <div class="message_time f_small">
                         {{itm.date.substring(11, 16)}}
+                      </div>
+                      <div class="options" :class="itm.active ? 'activeOption' : ''">
+                         <a>Message info</a>
+                         <a>Delete message</a>
                       </div>
                    </div>
                 </div>

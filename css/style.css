@@ -127,6 +127,7 @@ i:hover{
     min-height: 5vh;
     padding-left: 30px;
     padding-right: 30px;
+
 }
 
 .message_time{
@@ -151,6 +152,7 @@ i:hover{
     max-width: 47%;
     position: relative;
     margin-bottom: 10px;
+    position: relative;
 
 }
 
@@ -169,6 +171,7 @@ i:hover{
     max-width: 47%;
     position: relative;
     margin-bottom: 10px;
+    position: relative;
 }
 
 .box_sendmessage{
@@ -212,7 +215,25 @@ textarea:focus, input:focus{
     outline: none;
 }
 
+.options{
+    display: none;
+    position: absolute;
+    top: 90%;
+    z-index: 90;
+}
 
+.options a {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    width: 130px;
+    cursor: pointer;
+}
+
+.activeOption{
+    display: block;
+}
 
 
 /* Utilities  */
