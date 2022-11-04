@@ -8,6 +8,8 @@ const dt = luxon.DateTime;
 
         currentContact: 0,
 
+        currentContactBot : 0, 
+
         searchName : "",
 
         newObj : {
@@ -189,7 +191,7 @@ const dt = luxon.DateTime;
     created(){
       
         const now = dt.now().setLocale('it').toLocaleString();
-        console.log(now)
+        console.log(now.DateTime)
     },
 
 
@@ -205,6 +207,7 @@ const dt = luxon.DateTime;
             this.newObj.message = this.in_message
             this.contacts[this.currentContact].messages.push({...this.newObj}) 
             this.in_message = ""
+            this.currentContactBot = this.currentContact
             const addResp =  setTimeout(this.AddRecMess ,1000)
       
           },
@@ -213,7 +216,7 @@ const dt = luxon.DateTime;
 
             this.newObj.status ='received'
             this.newObj.message = 'ok'
-            this.contacts[this.currentContact].messages.push({...this.newObj}) 
+            this.contacts[this.currentContactBot].messages.push({...this.newObj}) 
             this.newObj.status='sent'
             this.newObj.message = ''
           },
