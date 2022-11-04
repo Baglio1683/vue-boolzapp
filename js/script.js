@@ -8,7 +8,11 @@ const dt = luxon.DateTime;
 
         currentContact: 0,
 
+        showOp : 0, 
+
         currentContactBot : 0, 
+
+        indexActiveMessage : -1,
 
         searchName : "",
 
@@ -260,13 +264,30 @@ const dt = luxon.DateTime;
           },
 
           showOption(ind){
-
+            
+            if(this.showOp===0){
             this.contacts[this.currentContact].messages[ind].active = !this.contacts[this.currentContact].messages[ind].active 
-
+            this.showOp=1
+            this.indexActiveMessage = ind
+            }
+            else{
+                return
+            }
           },
 
           delMessage(ind){
             this.contacts[this.currentContact].messages.splice(ind,1)
+            this.indexActiveMessage = -1
+            setTimeout(this.resetOp,500)
+          },
+
+          resetOp(){
+            this.showOp=0
+          },
+
+          closeWind(){
+            this.contacts[this.currentContact].messages[this.indexActiveMessage].active = !this.contacts[this.currentContact].messages[this.indexActiveMessage].active 
+            this.showOp=0
           }
 
         }
