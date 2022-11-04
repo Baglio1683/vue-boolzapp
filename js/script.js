@@ -261,6 +261,10 @@ const dt = luxon.DateTime;
 
             this.contacts[this.currentContact].messages[ind].active = !this.contacts[this.currentContact].messages[ind].active 
 
+          },
+
+          delMessage(ind){
+            this.contacts[this.currentContact].messages.splice(ind,1)
           }
 
         }
